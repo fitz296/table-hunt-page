@@ -78,13 +78,15 @@ body{margin:0}
   margin:9px 0 0;padding-top:8px;border-top:1px dashed var(--line)}
 .th-why{font-size:11.5px;color:var(--muted);margin:0;flex:1 1 auto;
   display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.th-acts{display:flex;gap:6px;flex:0 0 auto}
-.th-reject,.th-heart{font:inherit;font-size:11.5px;color:var(--muted);background:none;
-  border:1px solid var(--line);border-radius:999px;padding:5px 11px;cursor:pointer;
-  white-space:nowrap;min-height:32px}
+.th-acts{display:flex;gap:8px;flex:0 0 auto}
+/* 44px minimum: anything smaller is unreliable under a thumb. */
+.th-reject,.th-heart{font:inherit;font-size:12px;color:var(--muted);background:none;
+  border:1px solid var(--line);border-radius:999px;padding:0 14px;cursor:pointer;
+  white-space:nowrap;min-height:44px;min-width:44px;display:inline-flex;
+  align-items:center;justify-content:center;-webkit-tap-highlight-color:transparent}
 .th-reject:hover,.th-reject:focus-visible{color:var(--rust);border-color:var(--rust)}
 .th-reject:focus-visible{outline:2px solid var(--rust);outline-offset:2px}
-.th-heart{font-size:14px;line-height:1;padding:5px 10px}
+.th-heart{font-size:17px;line-height:1;padding:0 12px}
 .th-heart:hover,.th-heart:focus-visible{color:var(--brass);border-color:var(--brass)}
 .th-heart:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
 .th-heart[aria-pressed="true"]{color:var(--brass);border-color:var(--brass)}
